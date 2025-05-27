@@ -8,11 +8,9 @@ HOMEPAGE = "https://github.com/containers/crun"
 LICENSE = "GPLv2"
 LIC_FILES_CHKSUM = "file://COPYING;md5=b234ee4d69f5fce4486a80fdaf4a4263"
 
-SRC_URI = "gitsm://github.com/containers/crun;branch=main \
-           file://0001-Fix-compilation-error.patch \
-           file://0002-cgroup-destroy-hang.patch"
+SRC_URI = "gitsm://github.com/containers/crun;branch=main"
 
-SRCREV = "f6fbc8f840df1a414f31a60953ae514fa497c748"
+SRCREV = "0356bf4aff9a133d655dc13b1d9ac9424706cac4"
 
 DEPENDS += "yajl libseccomp libtool libcap"
 DEPENDS += "${@bb.utils.contains('DISTRO_FEATURES', 'RDKTV_CHECKPOINT_RESTORE', ' criu', '', d)}"
